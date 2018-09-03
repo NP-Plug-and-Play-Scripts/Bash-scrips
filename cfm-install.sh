@@ -1,13 +1,18 @@
 #!/bin/bash
 
-#############################################################
-#Bash script for the full instalation of CFM-id. Will create#
-#a new folder at the current location that will contain		#
-#CFM-id and some other libraries.							#
-#															#
-#Made by Rutger Ozinga 										#
-#last update:2018/8/29										#
-#############################################################
+##########################################################################
+#Bash script for the full instalation of CFM-id. Will create a new folder#
+#at the current location that will contain CFM-id and the libraries	 #  
+#lpsolve,rdkit,boost and cmake(if you decide to keep it).		 #
+# 									 #
+#These library versions can be found at:				 #
+#cfm-id: https://sourceforge.net/projects/cfm-id/			 #
+#lpsolve: https://sourceforge.net/projects/lpsolve/files/lpsolve/5.5.2.5/#
+#rdkit:https://sourceforge.net/projects/rdkit/files/rdkit/Q1_2016/ 	 #
+#boost:https://www.boost.org/users/history/version_1_67_0.html		 #
+#Made by Rutger Ozinga 					    		 #
+#last update:2018/8/29					                 #
+##########################################################################
 
 read -p "Continue with the instalation of CFM-id (y/n)? " CONT
 if [ "$CONT" = "y" ]; then
@@ -84,6 +89,7 @@ if [ "$CONT" = "y" ]; then
 	make install
 	cd ../..
 	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PWD/boost_1_67_0/lib:$PWD/rdkit-Release_2016_03_1/lib:$PWD/lp_solve_5.5/lpsolve55/bin/ux64
+	#comment out the following two lines to disable the removal of cmake!!
 	echo removing cmake-3.12.1 to save disk space!
 	rm -r cmake-3.12.1/
 	echo Instalation complete!
