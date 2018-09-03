@@ -11,7 +11,7 @@
 #rdkit:https://sourceforge.net/projects/rdkit/files/rdkit/Q1_2016/ 	 #
 #boost:https://www.boost.org/users/history/version_1_67_0.html		 #
 #Made by Rutger Ozinga 					    		 #
-#last update:2018/8/29					                 #
+#last update:2018/9/3					                 #
 ##########################################################################
 
 read -p "Continue with the instalation of CFM-id (y/n)? " CONT
