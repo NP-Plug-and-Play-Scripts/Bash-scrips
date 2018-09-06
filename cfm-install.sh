@@ -79,6 +79,7 @@ if [ "$CONT" = "y" ]; then
 	rm master.zip
 	cd Cfm-id-master
 	mv cfm/ ../
+	mv cfmData/ ../
 	cd ..
 	rm -r Cfm-id-master
 	cd cfm 
